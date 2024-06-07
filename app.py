@@ -4,8 +4,10 @@ import webbrowser
 import google.generativeai as genai
 
 #Gemini
-model = genai.GenerativeModel('gemini-pro')
-genai.configure(api_key="AIzaSyBhG8sdo4Z0921mEZ6U8I5D1D4kX6QaV3A")
+import os
+my_api_key_gemini = os.getenv('my_new_api_key_here')
+
+genai.configure(api_key=my_api_key_gemini)
 
 # Automatic opening in browser
 # url = ""
